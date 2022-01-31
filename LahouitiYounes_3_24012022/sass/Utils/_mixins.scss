@@ -1,0 +1,91 @@
+//Mixin des polices de caractère
+@mixin font-rule {
+}
+
+//Mixin pour les Media queries
+@mixin mobile-only {
+  @media screen and (max-width: map-get($breakpoints, mobile)) {
+    @content;
+  }
+}
+
+@mixin tablet-only {
+  @media screen and (min-width: map-get($breakpoints, mobile)) and (max-width: ($breakpoints: map-get($breakpoints, tablet))) {
+    @content;
+  }
+}
+
+@mixin laptop-only {
+  @media screen and (min-width: map-get($breakpoints, laptop)) and (max-width: map-get($breakpoints, desktop)) {
+    @content;
+  }
+}
+
+@mixin desktop-only {
+  @media screen and (min-width: map-get($breakpoints, desktop)) {
+    @content;
+  }
+}
+
+//Mixin pour les bordures
+@mixin border-radius($border: 15px) {
+  border-radius: $border;
+}
+
+@mixin border-corner-rad($top-left, $top-right, $bottom-right, $bottom-left) {
+  border-radius: $top-left $top-right $bottom-right $bottom-left;
+}
+
+@mixin border($thickness: 1px, $color: $color-primary) {
+  border: $thickness solid $color;
+}
+
+@mixin box-shadow(
+  $left: 5px,
+  $right: -5px,
+  $down: 5px,
+  $gradient: 5px,
+  $color: $color-border-shadow
+) {
+  box-shadow: $left $down $gradient $color, $right $down $gradient $color;
+}
+
+//Mixins pour les display
+
+/*----------------Flexbox----------------*/
+
+@mixin flexbox {
+  display: flex;
+}
+
+@mixin center-flex {
+  justify-content: center;
+  align-items: center;
+}
+/*-------------Grid-------------------*/
+@mixin grid-css {
+  display: grid;
+}
+
+@mixin grid-prop-mobile {
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-columns: repeat(1, 1fr);
+}
+
+@mixin grid-prop-wide-screen {
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+}
+
+/*---------------Pas de display-----------------*/
+
+@mixin no-display {
+  display: none;
+}
+
+//mixin shadow
+/*
+@mixin hover{
+  box-shadow: map-get($map: $box-shadow, $key: darken(shadow-left, 10%)), map-get($map: $box-shadow, $key: darken(shadow-right, 10%));
+}
+*/

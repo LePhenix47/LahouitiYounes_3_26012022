@@ -1,0 +1,41 @@
+.footer {
+  background-color: #353535;
+
+  padding: 5px;
+
+  &__heading {
+    font-family: "Shrikhand";
+    font-weight: normal;
+    color: $color-white;
+    margin: 20px;
+  }
+
+  &__list {
+    margin-left: 20px;
+    @include grid-css;
+    @include desktop-only {
+      grid-template-rows: repeat(1, 1fr);
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    @include mobile-only {
+      grid-template-rows: repeat(4, 1fr);
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  li{
+    padding: 5px;
+  }
+
+
+
+  a {
+    color: $color-white;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+
+  }
+}

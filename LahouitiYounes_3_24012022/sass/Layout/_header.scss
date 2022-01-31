@@ -1,0 +1,48 @@
+.header {
+  @include flexbox;
+  background-color: $color-white;
+
+  flex-flow: column wrap;
+
+  &__logo {
+    background: $color-white;
+    @include mobile-only {
+      display: flex;
+      @include center-flex;
+      overflow: hidden;
+      height: 70px;
+      box-shadow: map-get($map: $box-shadow, $key: shadow-header);
+      img {
+        width: 170px;
+        height: 30px;
+        margin: 10px;
+      }
+    }
+  }
+
+  &__location {
+    background-color: $color-grey;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    @include mobile-only {
+      display: flex;
+      flex-flow: row wrap-reverse;
+    }
+    i {
+      color: $color-dark-grey;
+    }
+    p {
+      margin-left: 15px;
+    }
+  }
+
+  &__prenote-menu {
+    background-color: $color-light-grey;
+    text-align: center;
+  }
+}
+
+.heading {
+  font-family: "Shrikhand";
+}

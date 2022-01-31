@@ -1,0 +1,30 @@
+.btn {
+  color: $color-white;
+  background: linear-gradient(
+    to right bottom,
+    $color-secondary,
+    $color-primary
+  );
+  padding: 14px 20px 14px 20px;
+  font-weight: bold;
+  &--rounded {
+    @include border-radius(30px);
+    @include box-shadow(3px, -3px, 3px, 5px, $color-border-shadow);
+  }
+
+  &--mobile {
+    display: none;
+    @include mobile-only {
+      display: inline-block;
+    }
+  }
+  &:hover {
+    @include box-shadow(3px, -3px, 3px, 7px, darken($color-border-shadow, 10%));
+  }
+
+  @include mobile-only {
+    &--wide-screen {
+      display: none;
+    }
+  }
+}

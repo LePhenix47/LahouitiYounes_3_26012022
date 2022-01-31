@@ -1,0 +1,78 @@
+.main {
+  &__operation {
+    @include flexbox;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    align-items: center;
+    &-card-list {
+      @include flexbox;
+      @include mobile-only {
+        flex-flow: column wrap;
+      }
+    }
+
+    &-card {
+      @include border-radius(20px);
+      @include box-shadow(5px, -5px, 5px, 3px, $color-grey);
+      padding: 25px;
+      margin: 20px;
+      background-color: $color-light-grey;
+      &:hover {
+        i {
+          color: $color-primary;
+        }
+      }
+    }
+
+    i {
+      color: $color-icons;
+    }
+  }
+
+  &__section {
+    background-color: $color-light-grey;
+    display: flex;
+    flex-flow: column wrap;
+    @include center-flex;
+    &-heading {
+      font-weight: bold;
+    }
+  }
+
+  &__card-list--grid {
+    @include grid-css;
+    @include grid-prop-wide-screen;
+    gap: 50px;
+    @include mobile-only {
+      @include grid-prop-mobile;
+      gap: 15px;
+    }
+  }
+
+  &__section-card-new {
+    background-color: $color-tertiary;
+    color: darken($color-tertiary, 30%);
+  }
+
+  &__section-card {
+    @include border-radius(20px);
+    @include box-shadow;
+
+    display: flex;
+    flex-flow: column wrap;
+    max-width: 250px;
+    img {
+      object-fit: cover;
+      overflow: hidden;
+      @include border-corner-rad(15px, 15px, 0, 0);
+      max-width: 250px;
+    }
+    &-content {
+      @include border-corner-rad(0, 0, 15px, 15px);
+      @include flexbox;
+      justify-content: space-between;
+      align-items: center;
+      background-color: $color-white;
+    }
+  }
+}
