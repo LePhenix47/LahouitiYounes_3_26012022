@@ -1,0 +1,246 @@
+/*----------------Flexbox----------------*/
+/*-------------Grid-------------------*/
+/*---------------Pas de display-----------------*/
+/*
+@mixin hover{
+  box-shadow: map-get($map: $box-shadow, $key: darken(shadow-left, 10%)), map-get($map: $box-shadow, $key: darken(shadow-right, 10%));
+}
+*/
+/*
+$palette:(
+  active :(
+    bg
+    border
+    txt
+  )
+  focus :(
+    bg
+    border
+    txt
+  )
+  hover :(
+    bg
+    border
+    txt
+  )
+)
+*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,700;1,700&family=Shrikhand&display=swap");
+body {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: "Roboto";
+  font-weight: 500;
+}
+
+/*
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+*/
+ul {
+  list-style-type: none;
+  padding-left: 0px;
+  margin-left: 0px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+a:visited {
+  color: black;
+}
+
+.btn {
+  color: #fff;
+  background: linear-gradient(to right bottom, #ff79da, #9356dc);
+  padding: 14px 20px 14px 20px;
+  font-weight: bold;
+}
+.btn--rounded {
+  border-radius: 30px;
+  box-shadow: 3px 3px 5px #d2d2d2, -3px 3px 5px #d2d2d2;
+}
+.btn--mobile {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .btn--mobile {
+    display: inline-block;
+  }
+}
+.btn:hover {
+  box-shadow: 3px 3px 7px #b9b9b9, -3px 3px 7px #b9b9b9;
+}
+@media screen and (max-width: 768px) {
+  .btn--wide-screen {
+    display: none;
+  }
+}
+
+.header {
+  display: flex;
+  background-color: #fff;
+  flex-flow: column wrap;
+}
+.header__logo {
+  background: #fff;
+}
+@media screen and (max-width: 768px) {
+  .header__logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    height: 70px;
+    box-shadow: 0px 3px 3px #d2d2d2;
+  }
+  .header__logo img {
+    width: 170px;
+    height: 30px;
+    margin: 10px;
+  }
+}
+.header__location {
+  background-color: #eaeaea;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+}
+@media screen and (max-width: 768px) {
+  .header__location {
+    display: flex;
+    flex-flow: row wrap-reverse;
+  }
+}
+.header__location i {
+  color: #353535;
+}
+.header__location p {
+  margin-left: 15px;
+}
+.header__prenote-menu {
+  background-color: #f6f6f6;
+  text-align: center;
+}
+
+.heading {
+  font-family: "Shrikhand";
+}
+
+.footer {
+  background-color: #353535;
+  padding: 5px;
+}
+.footer__heading {
+  font-family: "Shrikhand";
+  font-weight: normal;
+  color: #fff;
+  margin: 20px;
+}
+.footer__list {
+  margin-left: 20px;
+  display: grid;
+}
+@media screen and (min-width: 1050px) {
+  .footer__list {
+    grid-template-rows: repeat(1, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media screen and (max-width: 768px) {
+  .footer__list {
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.footer li {
+  padding: 5px;
+}
+.footer a {
+  color: #fff;
+  text-decoration: none;
+}
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.main__operation {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+.main__operation-card-list {
+  display: flex;
+}
+@media screen and (max-width: 768px) {
+  .main__operation-card-list {
+    flex-flow: column wrap;
+  }
+}
+.main__operation-card {
+  border-radius: 20px;
+  box-shadow: 5px 5px 3px #eaeaea, -5px 5px 3px #eaeaea;
+  padding: 25px;
+  margin: 20px;
+  background-color: #f6f6f6;
+}
+.main__operation-card:hover i {
+  color: #9356dc;
+}
+.main__operation i {
+  color: #7e7e7e;
+}
+.main__section {
+  background-color: #f6f6f6;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+}
+.main__section-heading {
+  font-weight: bold;
+}
+.main__card-list--grid {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  gap: 50px;
+}
+@media screen and (max-width: 768px) {
+  .main__card-list--grid {
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+    gap: 15px;
+  }
+}
+.main__section-card-new {
+  background-color: #99e2d0;
+  color: #32b091;
+}
+.main__section-card {
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px #d2d2d2, -5px 5px 5px #d2d2d2;
+  display: flex;
+  flex-flow: column wrap;
+  max-width: 250px;
+}
+.main__section-card img {
+  object-fit: cover;
+  overflow: hidden;
+  border-radius: 15px 15px 0 0;
+  max-width: 250px;
+}
+.main__section-card-content {
+  border-radius: 0 0 15px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+}
+
+/*# sourceMappingURL=style.css.map */
