@@ -1,4 +1,8 @@
 .header {
+  #no-display{
+    display: none;
+  }
+  
   display: flex;
   background-color: $color-white;
   flex-flow: column wrap;
@@ -8,9 +12,9 @@
   }
 
   &__logo {
-    @include box-shadow(0px, 0px, -3px, 3px);
+    z-index: 1;
+    @include box-shadow(0px, 0px, 3px, 3px);
     background: $color-white;
-
     @include mobile-only {
       display: flex;
       @include center-flex;
