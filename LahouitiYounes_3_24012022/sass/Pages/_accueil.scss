@@ -1,11 +1,16 @@
 .main {
+  &__heading {
+    font-weight: bold;
+  }
+
   &__operation {
-    @include flexbox;
+    text-align: center;
+    display: flex;
     flex-flow: column wrap;
     justify-content: flex-start;
     align-items: center;
     &-card-list {
-      @include flexbox;
+      display: flex;
       @include mobile-only {
         flex-flow: column wrap;
       }
@@ -40,12 +45,16 @@
   }
 
   &__card-list--grid {
-    @include grid-css;
+    display: grid;
     @include grid-prop-wide-screen;
     gap: 50px;
     @include mobile-only {
       @include grid-prop-mobile;
       gap: 15px;
+      width: 335px;
+    }
+    @include tablet-only{
+      gap: 20px;
     }
   }
 
@@ -60,19 +69,35 @@
 
     display: flex;
     flex-flow: column wrap;
-    max-width: 250px;
-    img {
+
+    &-img {
       object-fit: cover;
       overflow: hidden;
       @include border-corner-rad(15px, 15px, 0, 0);
-      max-width: 250px;
+      height: 275px;
+      @include mobile-only {
+        height: 175px;
+      }
+      @include desktop-only {
+        height: 300px;
+      }
     }
     &-content {
       @include border-corner-rad(0, 0, 15px, 15px);
-      @include flexbox;
+      display: flex;
       justify-content: space-between;
       align-items: center;
       background-color: $color-white;
+    }
+  }
+
+  a {
+    @include mobile-only {
+      height: 175px;
+    }
+    @include desktop-only {
+      height: 300px;
+      width: 450px;
     }
   }
 }

@@ -9,12 +9,6 @@ $color-dark-grey: #353535;
 $color-border-shadow: #d2d2d2;
 $color-icons: #7e7e7e;
 
-$box-shadow: (
-  shadow-header: 0px 3px 3px $color-border-shadow,
-  shadow-left: 5px 5px 3px $color-border-shadow,
-  shadow-right: -5px 5px 3px $color-border-shadow,
-);
-
 //maps
 $breakpoints: (
   mobile: 768px,
@@ -29,6 +23,7 @@ $fonts: (
   Roboto: "Roboto",
   Shrikhand: "Shrikhand",
 );
+
 /*
 $palette:(
   active :(

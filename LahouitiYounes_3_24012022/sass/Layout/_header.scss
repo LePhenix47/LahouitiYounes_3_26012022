@@ -1,17 +1,22 @@
 .header {
-  @include flexbox;
+  display: flex;
   background-color: $color-white;
-
   flex-flow: column wrap;
 
+  &__heading {
+    font-weight: bold;
+  }
+
   &__logo {
+    @include box-shadow(0px, 0px, -3px, 3px);
     background: $color-white;
+
     @include mobile-only {
       display: flex;
       @include center-flex;
       overflow: hidden;
       height: 70px;
-      box-shadow: map-get($map: $box-shadow, $key: shadow-header);
+
       img {
         width: 170px;
         height: 30px;
