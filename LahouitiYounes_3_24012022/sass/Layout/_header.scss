@@ -16,7 +16,6 @@
     @include box-shadow(0px, 0px, 3px, 3px);
     background: $color-white;
     @include mobile-only {
-      display: flex;
       @include center-flex;
       overflow: hidden;
       height: 70px;

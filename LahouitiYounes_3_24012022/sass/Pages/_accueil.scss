@@ -19,7 +19,8 @@
       color: white;
       background: $color-primary;
       border-radius: 15px;
-      width: 0.5%;
+      position: absolute;
+      transform: translate(-135px, 40px);
       padding: 5px 10px;
     }
 
@@ -30,7 +31,7 @@
       margin: 20px;
       background-color: $color-light-grey;
       &:hover {
-        background: #f5edff ;
+        background: #f5edff;
         i {
           color: $color-primary;
         }
@@ -47,9 +48,9 @@
 
   &__section {
     background-color: $color-light-grey;
-    display: flex;
-    flex-flow: column wrap;
     @include center-flex;
+    flex-flow: column wrap;
+
     &-heading {
       font-weight: bold;
     }
@@ -72,6 +73,8 @@
   &__section-card-new {
     background-color: $color-tertiary;
     color: darken($color-tertiary, 30%);
+    position: absolute;
+    transform: translate(250px, 15px);
   }
 
   &__section-card {
