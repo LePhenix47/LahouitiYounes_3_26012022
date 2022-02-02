@@ -1,11 +1,11 @@
 .header {
-  #no-display{
-    display: none;
-  }
-  
   display: flex;
   background-color: $color-white;
   flex-flow: column wrap;
+  
+  #no-display {
+    display: none;
+  }
 
   &__heading {
     font-weight: bold;

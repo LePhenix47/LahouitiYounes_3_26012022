@@ -2,6 +2,13 @@
 $color-primary: #9356dc;
 $color-secondary: #ff79da;
 $color-tertiary: #99e2d0;
+
+$color-gradient: linear-gradient(
+  to right bottom,
+  $color-secondary,
+  $color-primary
+);
+
 $color-white: #fff;
 $color-grey: #eaeaea;
 $color-light-grey: #f6f6f6;
@@ -13,33 +20,6 @@ $color-icons: #7e7e7e;
 $breakpoints: (
   mobile: 768px,
   tablet: 992px,
-  laptop: 993px,
-  //Petit écran ordi
-  desktop: 1050px,
-  //Grand écran ordi,
+  laptop: 993px,     //Petit écran ordi
+  desktop: 1150px,   //Grand écran ordi
 );
-
-$fonts: (
-  Roboto: "Roboto",
-  Shrikhand: "Shrikhand",
-);
-
-/*
-$palette:(
-  active :(
-    bg
-    border
-    txt
-  )
-  focus :(
-    bg
-    border
-    txt
-  )
-  hover :(
-    bg
-    border
-    txt
-  )
-)
-*/

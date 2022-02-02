@@ -72,9 +72,25 @@
 
   &__section-card-new {
     background-color: $color-tertiary;
-    color: darken($color-tertiary, 30%);
+    color: darken($color-tertiary, 40%);
+    padding: 7px;
+    @include border-radius(2px);
     position: absolute;
-    transform: translate(250px, 15px);
+    @include mobile-only {
+      transform: translate(250px, 15px);
+    }
+
+    @include tablet-only {
+      transform: translate(320px, 15px);
+    }
+
+    @include laptop-only {
+      transform: translate(320px, 15px);
+    }
+
+    @include desktop-only {
+      transform: translate(450%, 15px);
+    }
   }
 
   &__section-card {
@@ -109,6 +125,7 @@
         margin: 5px;
       }
     }
+    
   }
 
   a {
@@ -120,4 +137,8 @@
       width: 450px;
     }
   }
+
+  
+
+
 }

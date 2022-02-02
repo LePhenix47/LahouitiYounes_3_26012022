@@ -77,9 +77,3 @@
   padding: $top $right $bottom $left;
 }
 
-//mixin shadow
-/*
-@mixin hover{
-  box-shadow: map-get($map: $box-shadow, $key: darken(shadow-left, 10%)), map-get($map: $box-shadow, $key: darken(shadow-right, 10%));
-}
-*/
