@@ -51,8 +51,11 @@
   font-family: "Shrikhand";
 }
 
-@mixin Roboto {
+@mixin Roboto-heading {
   font-family: "Roboto";
+  text-align: left;
+  width: 100%;
+  padding-left: 20px;
 }
 
 //Mixins pour les display
@@ -85,4 +88,3 @@
 @mixin padding($top, $right, $bottom, $left) {
   padding: $top $right $bottom $left;
 }
-
