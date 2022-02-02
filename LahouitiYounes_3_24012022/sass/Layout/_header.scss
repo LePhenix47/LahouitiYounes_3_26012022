@@ -8,7 +8,11 @@
   }
 
   &__heading {
-    font-weight: bold;
+    @extend %headings;
+  }
+
+  &__text{
+    @extend %text;
   }
 
   span {
@@ -17,6 +21,8 @@
       display: none;
     }
   }
+
+ 
 
   &__logo {
     font-family: "Shrikhand";
@@ -31,6 +37,8 @@
       height: 70px;
     }
   }
+
+
 
   &__location {
     background-color: $color-grey;
@@ -52,9 +60,10 @@
   &__prenote-menu {
     background-color: $color-light-grey;
     text-align: center;
+    padding-bottom: 25px;
+    @include mobile-only{
+      padding-bottom: 50px;
+    }
+    
   }
-}
-
-.heading {
-  font-family: "Shrikhand";
 }

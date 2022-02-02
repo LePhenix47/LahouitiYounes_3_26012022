@@ -2,7 +2,7 @@
   color: $color-white;
   background: $color-gradient;
   padding: 14px 20px 14px 20px;
-  font-weight: 400;
+  font-weight: 600;
   &--rounded {
     @include border-radius(30px);
     @include box-shadow(3px, -3px, 3px, 5px, $color-border-shadow);
