@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
   <head>
     <!--metas-->
     <meta charset="utf-8" />
@@ -23,116 +23,192 @@
       rel="stylesheet"
     />
 
-    <!--police de caractère-->
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Roboto"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Shrikhand"
-    />
-
     <!--Lien avec CSS-->
     <link rel="stylesheet" type="text/css" href="public/css/style.css" />
 
     <!--Logo onglet-->
+    <link
+      rel="icon"
+      type="image/gif"
+      href="public/images/logo/ohmyfood@2x.svg"
+    />
 
-    <!---Titre---->
+    <!--Titre-->
     <title>Accueil de la page, ohMyFood</title>
   </head>
 
-  <!---ATTENTION: Changer les paragraphes <p> dans les 4 pages du menu en titres <h2>-->
+  <!---ATTENTION: 
+    Les textes p doivent avoir → font: 'Roboto' 
+    et 
+    les titres h1, h2 & h3 → font: 'Shrikhand'
+
+    Mettre les titres w/ classe font-Shrikhand & § w/ class font-Roboto
+  -->
 
   <body>
-    <header>
-      <i class="fas fa-map-marker-alt"></i>
-      <img src="public/images/logo/ohmyfood.png" alt="Logo OhMyFood" />
-      <p>Paris, Belleville</p>
+    <header class="header flex">
+      <a href="accueil.html" id="no-display">
+        <i class="fas fa-arrow-left" id="#no-display"></i>
+      </a>
+      <div class="header__logo">
+        <img src="public/images/logo/ohmyfood.png" alt="Logo OhMyFood" />
+      </div>
+      <div class="header__location">
+        <i class="fas fa-map-marker-alt"></i>
+        <p>Paris, Belleville</p>
+      </div>
+      <div class="header__prenote-menu">
+        <p class="header__heading">Réservez le menu qui vous convient</p>
+        <!--Titre-->
+        <p>Découvrez des restaurants d'exception séléctionnés par nos soins</p>
+        <form method="post" action="#">
+          <input
+            type="button"
+            value="Explorer nos restaurants"
+            class="btn btn--rounded btn--mobile"
+          />
+
+          <button type="button" class="btn btn--rounded btn--wide-screen">
+            Explorer nos restaurants <i class="fas fa-chevron-circle-down"></i>
+          </button>
+        </form>
+      </div>
     </header>
     <main>
-      <h2>Réservez le menu qui vous convient</h2>
-      <p>Découvrez des restaurants d'exception séléctionnés par nos soins</p>
+      <div class="main__operation">
+        <p class="main__heading">Fonctionnement</p>
+        <!--Titre-->
 
-      <form action="#">
-        <input type="button" value="Explorer nos restaurants" />
-      </form>
+        <div class="main__operation-card-list">
+          <a href="#section-page">
+            <span class="main__operation-number">1</span>
+            <div class="main__operation-card">
+              <i class="fas fa-mobile-alt main__operation-card-icon"></i>
+              Choisissez un restaurant
+            </div>
+          </a>
 
-      <h2>Fonctionnement</h2>
+          <a href="#section-page"
+            ><div class="main__operation-card-row"></div>
+            <span class="main__operation-number">2</span>
+            <div class="main__operation-card">
+              <i class="fas fa-list-ul main__operation-card-icon"></i> Composez
+              votre menu
+            </div>
+          </a>
 
-      <ul>
-        <li>
-          <i class="fas fa-mobile-alt"></i>
-          Choisissez un restaurant
-        </li>
-        <li>
-          <i class="fas fa-list-ul"></i>
-          Composez votre menu
-        </li>
-        <li>
-          <i class="fas fa-store"></i>
-          Dégustez au restaurant
-        </li>
-      </ul>
+          <a href="#section-page"
+            ><div class="main__operation-card-row"></div>
+            <span class="main__operation-number">3</span>
+            <div class="main__operation-card">
+              <i class="fas fa-store main__operation-card-icon"></i> Dégustez au
+              restaurant
+            </div>
+          </a>
+        </div>
+      </div>
 
-      <section>
-        <a href="menu_la_palette_du_gout.html">
-          <div>
-            <span>Nouveau</span>
-            <img
-              src="public/images/restaurants/la_palette_du_gout.jpg"
-              alt="Image du menu 'La palette du goût'"
-            />
-            <p>Ménilmontant</p>
-            <i class="fas fa-heart"></i>
-            <i class="far fa-heart"></i>
-          </div>
-        </a>
+      <section class="main__section" id="#section-page">
+        <p class="main__section-heading">Restaurants</p>
+        <!--Titre-->
+        <div class="main__section-card-list main__card-list--grid">
+          <a href="menu_la_palette_du_gout.html">
+            <div class="main__section-card main__section-card--rounded">
+              <span class="main__section-card-new">Nouveau</span>
 
-        <a href="menu_la_note_enchantee.html">
-          <div>
-            <span>Nouveau</span>
-            <img
-              src="public/images/restaurants/la_note_enchantee.jpg"
-              alt="Images du menu 'La note enchantée'"
-            />
-            <p>Charonne</p>
-            <i class="fas fa-heart"></i>
-            <i class="far fa-heart"></i>
-          </div>
-        </a>
+              <img
+                src="public/images/restaurants/la_palette_du_gout.jpg"
+                alt="Image du menu 'La palette du goût'"
+                class="main__section-card-img"
+              />
 
-        <a href="menu_a_la_francaise.html">
-          <div>
-            <img
-              src="public/images/restaurants/a_la_francaise.jpg"
-              alt="Images du menu 'À la française'"
-            />
-            <p>Cité Rouge</p>
-            <i class="fas fa-heart"></i>
-            <i class="far fa-heart"></i>
-          </div>
-        </a>
+              <div class="main__section-card-content">
+                <div class="main__section-card-text">
+                  <p class="main__heading">La palette du goût</p>
+                  <p>Ménilmontant</p>
+                </div>
+                <div class="main__section-card-like-btn">
+                  <i class="fas fa-heart"></i>
+                  <i class="far fa-heart"></i>
+                </div>
+              </div>
+            </div>
+          </a>
 
-        <a href="menu_le_delice_des_sens.html">
-          <div>
-            <img
-              src="public/images/restaurants/le_delice_des_sens.jpg"
-              alt="Images du menu 'Le délice des sens'"
-            />
-            <p>Folie-Méricourt</p>
-            <i class="fas fa-heart"></i>
-            <i class="far fa-heart"></i>
-          </div>
-        </a>
+          <a href="menu_la_note_enchantee.html">
+            <div class="main__section-card main__section-card--rounded">
+              <span class="main__section-card-new">Nouveau</span>
+
+              <img
+                src="public/images/restaurants/la_note_enchantee.jpg"
+                alt="Image du menu 'La note enchantée'"
+                class="main__section-card-img"
+              />
+
+              <div class="main__section-card-content">
+                <div class="main__section-card-text">
+                  <p class="main__heading">La note enchantée</p>
+                  <p>Charonne</p>
+                </div>
+                <div class="main__section-card-like-btn">
+                  <i class="fas fa-heart"></i>
+
+                  <i class="far fa-heart"></i>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <a href="menu_a_la_francaise.html">
+            <div class="main__section-card main__section-card--rounded">
+              <img
+                src="public/images/restaurants/a_la_francaise.jpg"
+                alt="Image du menu 'À la française'"
+                class="main__section-card-img"
+              />
+
+              <div class="main__section-card-content">
+                <div class="main__section-card-text">
+                  <p class="main__heading">À la française</p>
+                  <p>Cité rouge</p>
+                </div>
+                <div class="main__section-card-like-btn">
+                  <i class="fas fa-heart"></i>
+                  <i class="far fa-heart"></i>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <a href="menu_le_delice_des_sens.html">
+            <div class="main__section-card main__section-card--rounded">
+              <img
+                src="public/images/restaurants/le_delice_des_sens.jpg"
+                alt="Image du menu 'Le délice des sens'"
+                class="main__section-card-img"
+              />
+
+              <div class="main__section-card-content">
+                <div class="main__section-card-text">
+                  <p class="main__heading">Le délice des sens</p>
+                  <p>Folie-Méricourt</p>
+                </div>
+                <div class="main__section-card-like-btn">
+                  <i class="fas fa-heart"></i>
+                  <i class="far fa-heart"></i>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
       </section>
     </main>
 
-    <footer>
-      <h2>ohmyfood</h2>
-      <ul>
+    <footer class="footer flex">
+      <h2 class="footer__heading">ohmyfood</h2>
+      <ul class="footer__list flex">
         <li>
-          <a href="#">
+          <a href="#" class="footer__advise">
             <i class="fas fa-utensils"></i>
             Proposer un restaurant
           </a>
