@@ -2,7 +2,7 @@
   display: flex;
   background-color: $color-white;
   flex-flow: column wrap;
-  
+
   #no-display {
     display: none;
   }
@@ -11,20 +11,24 @@
     font-weight: bold;
   }
 
+  span {
+    display: inline;
+    @include mobile-only {
+      display: none;
+    }
+  }
+
   &__logo {
+    font-family: "Shrikhand";
+    font-weight: normal;
     z-index: 1;
-    @include box-shadow(0px, 0px, 3px, 3px);
     background: $color-white;
+    @include center-flex;
+    @include box-shadow(0px, 0px, 3px, 3px);
     @include mobile-only {
       @include center-flex;
       overflow: hidden;
       height: 70px;
-
-      img {
-        width: 170px;
-        height: 30px;
-        margin: 10px;
-      }
     }
   }
 

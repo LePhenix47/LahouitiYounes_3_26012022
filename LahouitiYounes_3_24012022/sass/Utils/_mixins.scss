@@ -46,6 +46,15 @@
   box-shadow: $left $down $gradient $color, $right $down $gradient $color;
 }
 
+//Mixins pour les fonts
+@mixin Shrikhand {
+  font-family: "Shrikhand";
+}
+
+@mixin Roboto {
+  font-family: "Roboto";
+}
+
 //Mixins pour les display
 
 /*----------------Flexbox----------------*/
