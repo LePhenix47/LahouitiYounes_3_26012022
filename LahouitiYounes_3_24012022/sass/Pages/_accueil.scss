@@ -7,20 +7,25 @@
     text-align: center;
     display: flex;
     flex-direction: column;
-  //  flex-flow: column wrap;
+    position: relative;
     justify-content: flex-start;
     align-items: center;
 
-    h2{
+    h2 {
       @include Roboto-heading;
+      @include mobile-only{
+        text-align: center;
+      }
     }
-
-    
 
     &-card-list {
       display: flex;
       @include mobile-only {
         flex-flow: column wrap;
+      }
+      @include tablet-only{
+        flex-direction: column;
+        text-align: center;
       }
     }
     &-number {
@@ -59,12 +64,13 @@
     @include center-flex;
     flex-direction: column;
     &-heading {
-     @include Roboto-heading;
+      @include Roboto-heading;
     }
   }
 
   &__card-list--grid {
     display: grid;
+    margin-bottom: 60px;
     @include grid-prop-wide-screen;
     gap: 25px;
     @include mobile-only {
@@ -83,21 +89,8 @@
     padding: 7px;
     @include border-radius(2px);
     position: absolute;
-    @include mobile-only {
-      transform: translate(250px, 15px);
-    }
-
-    @include tablet-only {
-      transform: translate(320px, 15px);
-    }
-
-    @include laptop-only {
-      transform: translate(320px, 15px);
-    }
-
-    @include desktop-only {
-      transform: translate(450%, 15px);
-    }
+    right: 13px;
+    top: 13px;
   }
 
   &__section-card {
@@ -105,7 +98,7 @@
     @include box-shadow;
     display: flex;
     flex-flow: column wrap;
-
+    position: relative;
     &-img {
       object-fit: cover;
       overflow: hidden;
@@ -115,7 +108,7 @@
         height: 175px;
       }
       @include tablet-only {
-        height: 240px;
+        height: 200px;
       }
       @include desktop-only {
         height: 300px;
@@ -127,6 +120,7 @@
       justify-content: space-between;
       align-items: center;
       background-color: $color-white;
+      position: relative;
     }
     &-text {
       margin: 10px;
@@ -136,6 +130,11 @@
       h4 {
         margin: 5px 5px 5px 5px;
       }
+    }
+    &-like-btn{
+      position: absolute;
+      right: 25px;
+      bottom: 25px;
     }
   }
 
