@@ -11,12 +11,17 @@
     @extend %text;
   }
 
-  span {
+  &__logo-slogan {
     display: inline;
     @include mobile-only {
       display: none;
     }
+    @include tablet-only{
+      display: none;
+    }
   }
+
+
 &__heading{
   font-family: "Roboto";
 }
@@ -47,7 +52,7 @@
     i {
       color: $color-dark-grey;
     }
-    p {
+    h4 {
       margin-left: 15px;
     }
   }

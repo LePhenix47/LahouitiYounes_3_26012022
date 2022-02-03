@@ -6,6 +6,7 @@
   &--rounded {
     @include border-radius(30px);
     @include box-shadow(3px, -3px, 3px, 5px, $color-border-shadow);
+    border: 10px solid $color-gradient;
   }
 
   &--mobile {
