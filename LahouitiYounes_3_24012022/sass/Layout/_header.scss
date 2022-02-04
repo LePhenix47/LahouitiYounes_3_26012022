@@ -2,9 +2,15 @@
   display: flex;
   background-color: $color-white;
   flex-flow: column wrap;
-
+  position: relative;
   #no-display {
     display: none;
+  }
+
+  #show-display {
+    position: absolute;
+    left: 25px;
+    top: 20px;
   }
 
   &__text {
@@ -16,15 +22,14 @@
     @include mobile-only {
       display: none;
     }
-    @include tablet-only{
+    @include tablet-only {
       display: none;
     }
   }
 
-
-&__heading{
-  font-family: "Roboto";
-}
+  &__heading {
+    font-family: "Roboto";
+  }
 
   &__logo {
     font-family: "Shrikhand";

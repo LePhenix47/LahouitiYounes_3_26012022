@@ -43,57 +43,87 @@
 
   <body>
     <header>
-      <a href="accueil.html">
+      <a href="accueil.html" id="show-display">
         <i class="fas fa-arrow-left"></i>
       </a>
       <div class="header__logo">
-        <h1>ohmyfood<span class="header__logo-slogan">, vos menus de qualité!</span></h1>
+        <h1>
+          ohmyfood<span class="header__logo-slogan"
+            >, vos menus de qualité!</span
+          >
+        </h1>
       </div>
     </header>
     <main>
-      <section>
-        <img
-          src="public/images/restaurants/la_note_enchantee.jpg"
-          alt="Photo du menu 'la note enchantée"
-        />
+      <section class="menu flex">
+        <div class="menu__food-list">
+          <h1 class="menu__heading">La note enchantée</h1>
 
-        <p>La note enchantée</p>
-        <p>ENTREES</p>
+          <p class="menu__heading manu__heading--small">ENTREES</p>
+          <div class="card__list">
+            <div class="card">
+              <h3>Ravioles de foie gras</h3>
+              <p>Accompagnés de leur crème à la truffe <span>25€</span></p>
+            </div>
 
-        <h3>Ravioles de foie gras</h3>
-        <p>Accompagnés de leur crème à la truffe <span>25€</span></p>
+            <div class="card">
+              <h3>Caviar osciètre</h3>
+              <p>Sur blini à la farine de blé noir <span>35€</span></p>
+            </div>
 
-        <h3>Caviar osciètre</h3>
-        <p>Sur blini à la farine de blé noir <span>35€</span></p>
+            <div class="card">
+              <h3>Homard et espuma de potiron</h3>
+              <p>Mariné aux zestes d'orange <span>20€</span></p>
+            </div>
 
-        <h3>Homard et espuma de potiron</h3>
-        <p>Mariné aux zestes d'orange<span>20€</span></p>
+            <div class="card">
+              <h3>Foie gras de canard cuit entier</h3>
+              <p>Confiture de figue et pain toasté <span>35€</span></p>
+            </div>
+          </div>
 
-        <h3>Foie gras de canard cuit entier</h3>
-        <p>Confiture de figue et pain toasté <span>35€</span></p>
+          <p class="menu__heading manu__heading--small">PLATS</p>
+          <div class="card__list">
+            <div class="card">
+              <h3>Côte de boeuf Angus</h3>
+              <p>Et sa purée de panais <span>44€</span></p>
+            </div>
 
-        <p>PLATS</p>
+            <div class="card">
+              <h3>Noix de coquilles Saint-Jacques</h3>
+              <p>Sur lit de purée de céleri-rave <span>40€</span></p>
+            </div>
+            <div class="card">
+              <h3>Langoustine poêlée</h3>
+              <p>Purée de patate douce <span>35€</span></p>
+            </div>
 
-        <h3>Noix de coquilles Saint-Jacques</h3>
-        <p>Sur lit de purée de céleri-rave<span>40€</span></p>
+            <div class="card">
+              <h3>Mijoté de queue de boeuf</h3>
+              <p>Et riz sauvage aux zestes de citron <span>44€</span></p>
+            </div>
+          </div>
 
-        <h3>Langoustine poêlée</h3>
-        <p>Purée de patate douce <span>35€</span></p>
-
-        <h3>Mijoté de queue de boeuf</h3>
-        <p>Et riz sauvage aux zestes de citron<span>44€</span></p>
-
-        <p>DESSERT</p>
-
-        <h3>Macaron noisette et chocolat</h3>
-        <p>Glace au caramel brun et sel de Guérande<span>18€</span></p>
-
-        <h3>Baba au rhum revisité</h3>
-        <p>Avec son coulis de citron<span>22€</span></p>
-
-        <h3>Tarte au citron meringuée</h3>
-        <p>Déstructurée<span>23€</span></p>
+          <p class="menu__heading manu__heading--small">DESSERT</p>
+          <div class="card__list">
+            <div class="card">
+              <h3>Macaron noisette et chocolat</h3>
+              <p>Glace au caramel brun et sel de Guérande <span>18€</span></p>
+            </div>
+            <div class="card">
+              <h3>Baba au rhum revisité</h3>
+              <p>Avec son coulis de citron <span>22€</span></p>
+            </div>
+            <div class="card">
+              <h3>Tarte au citron meringuée</h3>
+              <p>Déstructurée <span>23€</span></p>
+            </div>
+          </div>
+        </div>
       </section>
+      <form method="post" action="#">
+        <input type="button" value="Commander" class="btn btn--rounded" />
+      </form>
     </main>
     <footer class="footer flex">
       <h2 class="footer__heading">ohmyfood</h2>

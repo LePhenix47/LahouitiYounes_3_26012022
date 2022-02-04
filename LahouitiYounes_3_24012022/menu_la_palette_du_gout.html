@@ -42,50 +42,74 @@
   </head>
 
   <body>
-    <header>
-      <a href="accueil.html">
+    <header class="header flex">
+      <a href="accueil.html" id="show-display">
         <i class="fas fa-arrow-left"></i>
       </a>
       <div class="header__logo">
         <h1>ohmyfood<span class="header__logo-slogan">, vos menus de qualité!</span></h1>
       </div>    </header>
-    <main>
-      <section>
-        <img src="public/images/restaurants/la_palette_du_gout.jpg" alt="Photo du menu 'La palette du goût'">
-        <p>ENTREES</p>
-
-        <h3>Fricassée d'escargot</h3>
-        <p>Au piment d'Espelette <span>25€</span></p>
-
-        <h3>Foie gras de canard mi-cuit</h3>
-        <p>Et ses copeaux de truffe noire<span>35€</span></p>
-
-        <h3>Oeuf au plat</h3>
-        <p>Assaisonné à la truffe sur lit de caviar<span>20€</span></p>
-
-        <p>PLATS</p>
-
-        <h3>Filet de boeuf aux herbes</h3>
-        <p>Accompagné de sa ribambelle de légumes<span>40€</span></p>
-
-        <p>Parmentier de queue de boeuf</h3>
-        <p>À la truffe noire sur sa purée de panais<span>35€</span></p>
-
-        <h3>Filet de turbot</h3>
-        <p>Aux agrumes<span>44€</span></p>
-
-        <p>DESSERT</p>
-
-        <h3>Paris-Brest</h3>
-        <p>Revisité<span>18€</span></p>
-
-        <h3>Macaron au chocolat d'exception</h3>
-        <p>Et glace à la vanille de Madagascar<span>22€</span></p>
-
-        <h3>Mousse au chocolat</h3>
-        <p>Au piment d'Espelette et à la truffe noire<span>23€</span></p>
-      </section>
-    </main>
+      <main>
+        <section class="menu flex">
+          <div class="menu__food-list">
+            <h1 class="menu__heading">La palette du goût</h1>
+  
+            <p class="menu__heading manu__heading--small">ENTREES</p>
+            <div class="card__list">
+              <div class="card">
+                <h3>Tartare de thon</h3>
+                <p>Assaisonné au yuzu <span>25€</span></p>
+              </div>
+  
+              <div class="card">
+                <h3>Bouchée de homard croustillant</h3>
+                <p>Et sa farandole de petits légumes <span>35€</span></p>
+              </div>
+  
+              <div class="card">
+                <h3>Velouté de cèpes</h3>
+                <p>Aux truffes <span>20€</span></p>
+              </div>
+            </div>
+  
+            <p class="menu__heading manu__heading--small">PLATS</p>
+            <div class="card__list">
+              <div class="card">
+                <h3>Côte de boeuf Angus</h3>
+                <p>Et sa purée de panais <span>44€</span></p>
+              </div>
+  
+              <div class="card">
+                <h3>Poulet rôti aux herbes de Provence</h3>
+                <p>Et sa crème de truffe <span>40€</span></p>
+              </div>
+              <div class="card">
+                <h3>Langouste rôtie</h3>
+                <p>Et ses légumes de saison <span>35€</span></p>
+              </div>
+            </div>
+  
+            <p class="menu__heading manu__heading--small">DESSERT</p>
+            <div class="card__list">
+              <div class="card">
+                <h3>Farandole de desserts</h3>
+                <p>Du chef <span>18€</span></p>
+              </div>
+              <div class="card">
+                <h3>Crème brulée</h3>
+                <p>Revisitée <span>22€</span></p>
+              </div>
+              <div class="card">
+                <h3>Tiramisu</h3>
+                <p>À la noisette <span>23€</span></p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <form method="post" action="#">
+          <input type="button" value="Commander" class="btn btn--rounded" />
+        </form>
+      </main>
     <footer class="footer flex">
       <h2 class="footer__heading">ohmyfood</h2>
       <ul class="footer__list flex">

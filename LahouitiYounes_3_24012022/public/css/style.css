@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,700;1,700&family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500&display=swap");
-.main__text, .header__text {
+.main__text, .header__text, p {
   font-weight: 300;
 }
 
@@ -69,15 +69,26 @@ h1, h2 {
   display: flex;
   background-color: #fff;
   flex-flow: column wrap;
+  position: relative;
 }
 .header #no-display {
   display: none;
 }
-.header span {
+.header #show-display {
+  position: absolute;
+  left: 25px;
+  top: 20px;
+}
+.header__logo-slogan {
   display: inline;
 }
 @media screen and (max-width: 768px) {
-  .header span {
+  .header__logo-slogan {
+    display: none;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .header__logo-slogan {
     display: none;
   }
 }
@@ -118,7 +129,7 @@ h1, h2 {
 .header__location i {
   color: #353535;
 }
-.header__location p {
+.header__location h4 {
   margin-left: 15px;
 }
 .header__prenote-menu {
@@ -186,7 +197,12 @@ h1, h2 {
   width: 100%;
   padding-left: 20px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 993px) and (max-width: 1150px) {
+  .main__operation h2 {
+    text-align: center;
+  }
+}
+@media screen and (min-width: 1150px) {
   .main__operation h2 {
     text-align: center;
   }
@@ -245,12 +261,22 @@ h1, h2 {
   width: 100%;
   padding-left: 20px;
 }
+@media screen and (min-width: 993px) and (max-width: 1150px) {
+  .main__section-heading {
+    text-align: center;
+  }
+}
+@media screen and (min-width: 1150px) {
+  .main__section-heading {
+    text-align: center;
+  }
+}
 .main__card-list--grid {
   display: grid;
   margin-bottom: 60px;
   grid-template-rows: repeat(2, 1fr);
   grid-template-columns: repeat(2, 1fr);
-  gap: 25px;
+  gap: 50px;
 }
 @media screen and (max-width: 768px) {
   .main__card-list--grid {
