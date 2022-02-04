@@ -88,3 +88,14 @@
 @mixin padding($top, $right, $bottom, $left) {
   padding: $top $right $bottom $left;
 }
+
+
+//Mixins pour les positions relatives-absolues
+
+@mixin pos-abs ($top: 0px, $right: 0px, $bottom: 0px, $left: 0px){
+  position: absolute;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}

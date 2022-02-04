@@ -1,0 +1,27 @@
+
+
+
+.menu{
+    display: flex;
+    flex-direction: column;
+    &__img-fit{
+        object-fit: cover;
+        overflow: hidden;
+        height: 250px;
+    }
+    &__image{
+        width: 100%;
+        
+    }
+
+    &__heading{
+        margin-left: 20px;
+    }
+}
+ 
+.menu__card-list{
+    display: flex;
+    flex-direction: column;
+    margin: 0px, 10px, 0px, 10px;
+}
+

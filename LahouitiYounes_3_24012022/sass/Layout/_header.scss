@@ -7,10 +7,30 @@
     display: none;
   }
 
-  #show-display {
-    position: absolute;
-    left: 25px;
-    top: 20px;
+  h1 {
+    font-weight: normal;
+  }
+
+  a {
+    z-index: 2;
+    width: 22px;
+    height: 23px;
+    @include mobile-only {
+      @include pos-abs(25px, 0, 0, 20px);
+    }
+    @include tablet-only {
+      @include pos-abs(35px, 0, 0, 50px);
+    }
+    @include laptop-only {
+      @include pos-abs(35px, 0, 0, 50px);
+    }
+    @include desktop-only {
+      @include pos-abs(35px, 0, 0, 50px);
+    }
+  }
+
+  i {
+    font-size: 22px;
   }
 
   &__text {
