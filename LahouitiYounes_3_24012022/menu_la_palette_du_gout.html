@@ -57,66 +57,135 @@
 
     <main>
       <section class="menu flex">
-        <div class="menu__food-list">
-          <h1 class="menu__heading">La palette du goût</h1>
+        <div class="menu__img-fit">
+          <img
+            src="public/images/restaurants/la_palette_du_gout.jpg"
+            alt="Photo du menu 'La palette du goût'"
+            class="menu__image"
+          />
+        </div>
 
-          <p class="menu__heading manu__heading--small">ENTREES</p>
-          <div class="card__list">
-            <div class="card">
-              <h3>Tartare de thon</h3>
-              <p>Assaisonné au yuzu <span>25€</span></p>
-            </div>
+        <div class="menu__main-heading">
+          <h1>La palette du goût</h1>
+          <i class="far fa-heart"></i>
+        </div>
 
-            <div class="card">
-              <h3>Bouchée de homard croustillant</h3>
-              <p>Et sa farandole de petits légumes <span>35€</span></p>
-            </div>
+        <div class="food-list">
+          <div class="menu__list 1">
+            <p class="menu__heading menu__heading--small">ENTRÉES</p>
 
-            <div class="card">
-              <h3>Velouté de cèpes</h3>
-              <p>Aux truffes <span>20€</span></p>
+            <a href="#">
+              <div class="menu__card">
+                <h3 class="card__heading">Ravioles de foie gras</h3>
+                <p class="card__text menu__text">
+                  Accompagnés de leur crème à la truffe <span>25€</span>
+                </p>
+              </div>
+            </a>
+
+            <a href="#">
+              <div class="menu__card">
+                <h3 class="card__heading">Caviar osciètre</h3>
+                <p class="card__text">
+                  Sur blini à la farine de blé noir <span>35€</span>
+                </p>
+              </div>
+            </a>
+
+            <a href="#">
+              <div class="menu__card">
+                <h3 class="card__heading">Homard et espuma de potiron</h3>
+                <p class="card__text">
+                  Mariné aux zestes d'orange <span>20€</span>
+                </p>
+              </div>
+            </a>
+
+            <a href="#">
+              <div class="menu__card">
+                <h3 class="card__heading">Foie gras de canard cuit entier</h3>
+                <p class="card__text">
+                  Confiture de figue et pain toasté <span>35€</span>
+                </p>
+              </div>
+            </a>
+          </div>
+
+          <div class="menu__list 2">
+            <p class="menu__heading menu__heading--small">PLATS</p>
+
+            <div class="menu__card-list">
+
+
+               <a href="#">
+              <div class="menu__card">
+                <h3 class="card__heading">Côte de boeuf Angus</h3>
+                <p class="card__text">Et sa purée de panais <span>44€</span></p>
+              </div>
+               </a>
+               
+               <a href="#">
+              <div class="menu__card">
+                <h3 class="card__heading">Noix de coquilles Saint-Jacques</h3>
+                <p class="card__text">
+                  Sur lit de purée de céleri-rave <span>40€</span>
+                </p>
+              </div>
+               </a>
+
+               <a href="#">
+              <div class="menu__card">
+                <h3 class="card__heading">Langoustine poêlée</h3>
+                <p class="card__text">Purée de patate douce <span>35€</span></p>
+              </div>
+               </a>
+
+           <a href="#">
+              <div class="menu__card">
+                <h3 class="card__heading">Mijoté de queue de boeuf</h3>
+                <p class="card__text">
+                  Et riz sauvage aux zestes de citron <span>44€</span>
+                </p>
+              </div>
+               </a>
             </div>
           </div>
 
-          <p class="menu__heading manu__heading--small">PLATS</p>
-          <div class="card__list">
-            <div class="card">
-              <h3>Côte de boeuf Angus</h3>
-              <p>Et sa purée de panais <span>44€</span></p>
-            </div>
+          <div class="menu__list 3">
+            <p class="menu__heading menu__heading--small">DESSERT</p>
 
-            <div class="card">
-              <h3>Poulet rôti aux herbes de Provence</h3>
-              <p>Et sa crème de truffe <span>40€</span></p>
+             <a href="#">
+            <div class="menu__card">
+              <h3 class="card__heading">Macaron noisette et chocolat</h3>
+              <p class="card__text">
+                Glace au caramel brun et sel de Guérande <span>18€</span>
+              </p>
             </div>
-            <div class="card">
-              <h3>Langouste rôtie</h3>
-              <p>Et ses légumes de saison <span>35€</span></p>
+             <a href="#">
+            <div class="menu__card">
+              <h3 class="card__heading">Baba au rhum revisité</h3>
+              <p class="card__text">
+                Avec son coulis de citron <span>22€</span>
+              </p>
             </div>
-          </div>
-
-          <p class="menu__heading manu__heading--small">DESSERT</p>
-          <div class="card__list">
-            <div class="card">
-              <h3>Farandole de desserts</h3>
-              <p>Du chef <span>18€</span></p>
-            </div>
-            <div class="card">
-              <h3>Crème brulée</h3>
-              <p>Revisitée <span>22€</span></p>
-            </div>
-            <div class="card">
-              <h3>Tiramisu</h3>
-              <p>À la noisette <span>23€</span></p>
+             <a href="#">
+            <div class="menu__card">
+              <h3 class="card__heading">Tarte au citron meringuée</h3>
+              <p class="card__text">Déstructurée <span>23€</span></p>
             </div>
           </div>
         </div>
       </section>
-      <form method="post" action="#">
-        <input type="button" value="Commander" class="btn btn--rounded" />
+      <form method="post" action="#" class="menu__form">
+        <input
+          type="button"
+          value="Commander"
+          class="btn btn--rounded menu__btn"
+        />
       </form>
     </main>
 
+   
     <footer class="footer flex">
       <h2 class="footer__heading">ohmyfood</h2>
       <ul class="footer__list flex">

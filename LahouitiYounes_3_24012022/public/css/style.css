@@ -43,6 +43,8 @@ h1, h2 {
   background: linear-gradient(to right bottom, #ff79da, #9356dc);
   padding: 14px 20px 14px 20px;
   font-weight: 600;
+  width: 51%;
+  max-width: 415px;
 }
 .btn--rounded {
   border-radius: 30px;
@@ -54,6 +56,7 @@ h1, h2 {
 @media screen and (max-width: 768px) {
   .btn--mobile {
     display: inline-block;
+    min-width: 220px;
   }
 }
 .btn:hover {
@@ -145,7 +148,7 @@ h1, h2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 0px 3px 3px #d2d2d2, 0px 3px 3px #d2d2d2;
+  box-shadow: 0px 3px 6px #d2d2d2, 0px 3px 6px #d2d2d2;
 }
 @media screen and (max-width: 768px) {
   .header__logo {
@@ -407,26 +410,114 @@ h1, h2 {
   }
 }
 
+.food-list {
+  background: #f6f6f6;
+  padding-left: 12px;
+  padding-right: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+@media screen and (min-width: 1150px) {
+  .food-list {
+    flex-direction: row;
+  }
+}
+
 .menu {
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 .menu__img-fit {
-  object-fit: cover;
-  overflow: hidden;
   height: 250px;
+  z-index: -1;
 }
 .menu__image {
   width: 100%;
 }
-.menu__heading {
-  margin-left: 20px;
+@media screen and (min-width: 1150px) {
+  .menu__image {
+    margin-bottom: -80px;
+  }
 }
-
-.menu__card-list {
+.menu__main-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  background: #f6f6f6;
+  margin: 0;
+  padding: 20px 20px 5px 20px;
+  border-radius: 35px 35px 0 0;
+}
+@media screen and (min-width: 993px) and (max-width: 1150px) {
+  .menu__main-heading {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+}
+@media screen and (min-width: 1150px) {
+  .menu__main-heading {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+}
+.menu__heading {
+  position: relative;
+  margin-left: 5px;
+}
+.menu__heading--small {
+  font-weight: 400;
+}
+.menu__underline {
+  position: absolute;
+  background-color: #99e2d0;
+  width: 40px;
+  height: 4px;
+  top: 25px;
+  left: 1px;
+}
+.menu__list {
   display: flex;
   flex-direction: column;
-  margin: 0px, 10px, 0px, 10px;
+  flex-wrap: wrap;
+}
+.menu__list a {
+  margin: 20px 0 20px 0;
+}
+.menu__card {
+  text-overflow: ellipsis;
+  min-width: 340px;
+  background-color: #fff;
+  box-shadow: 5px 5px 5px #d2d2d2, -5px 5px 5px #d2d2d2;
+  border-radius: 15px;
+  max-height: 60px;
+  margin: 0;
+  padding: 10px 5px 10px 5px;
+}
+.menu__form {
+  background: #f6f6f6;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+.menu__btn {
+  width: 51%;
+  max-width: 415px;
+  min-width: 185px;
+}
+
+.card__heading {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 5px;
+}
+.card__text {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 5px;
 }
 
 /*# sourceMappingURL=style.css.map */
