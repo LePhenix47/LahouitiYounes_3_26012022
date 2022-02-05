@@ -1,27 +1,97 @@
-
-
-
-.menu{
-    display: flex;
-    flex-direction: column;
-    &__img-fit{
-        object-fit: cover;
-        overflow: hidden;
-        height: 250px;
-    }
-    &__image{
-        width: 100%;
-        
-    }
-
-    &__heading{
-        margin-left: 20px;
-    }
-}
- 
-.menu__card-list{
-    display: flex;
-    flex-direction: column;
-    margin: 0px, 10px, 0px, 10px;
+.food-list {
+  background: $color-light-grey;
+  padding-left: 12px;
+  padding-right: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  @include desktop-only {
+    flex-direction: row;
+  }
 }
 
+.menu {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+
+  &__img-fit {
+    height: 250px;
+    z-index: -1;
+  }
+
+  &__image {
+    width: 100%;
+    @include desktop-only {
+      margin-bottom: -80px;
+    }
+  }
+
+  &__main-heading {
+    background: $color-light-grey;
+    margin: 0 0px 0 0px;
+    padding: 20px 5px 5px 20px;
+    @include border-corner-rad(35px, 35px, 0, 0);
+    @include laptop-only {
+      margin-left: 50px;
+      margin-right: 50px;
+    }
+    @include desktop-only {
+      margin-left: 50px;
+      margin-right: 50px;
+    }
+  }
+
+  &__heading {
+    margin-left: 5px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  &__card {
+    text-overflow: ellipsis;
+      min-width: 340px;
+    background-color: $color-white;
+    @include box-shadow;
+    @include border-radius(15px);
+    max-height: 40px;
+    margin: 15px 0 15px 0;
+    padding: 10px 5px 10px 5px;
+  }
+
+  &__form {
+    background: $color-light-grey;
+
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+
+  &__btn {
+    width: 51%;
+    max-width: 415px;
+    min-width: 185px;
+  }
+}
+
+//Le contenu des cartes: titre, § et prix
+.card {
+  &__heading {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+  }
+
+  &__text {
+
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+  }
+}

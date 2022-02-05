@@ -3,6 +3,9 @@
   background: $color-gradient;
   padding: 14px 20px 14px 20px;
   font-weight: 600;
+  width: 51%;
+  
+  max-width: 415px;
   &--rounded {
     @include border-radius(30px);
     @include box-shadow(3px, -3px, 3px, 5px, $color-border-shadow);
@@ -12,6 +15,7 @@
     display: none;
     @include mobile-only {
       display: inline-block;
+      min-width: 220px;
     }
   }
 
