@@ -43,6 +43,7 @@ h1, h2 {
   padding: 14px 20px 14px 20px;
   font-weight: 600;
   width: 51%;
+  border: none;
   max-width: 415px;
 }
 .btn--rounded {
@@ -443,11 +444,7 @@ h1, h2 {
 }
 .menu__image {
   width: 100%;
-}
-@media screen and (min-width: 1150px) {
-  .menu__image {
-    margin-bottom: -80px;
-  }
+  min-width: 420px;
 }
 .menu__main-heading {
   display: flex;
@@ -500,7 +497,7 @@ h1, h2 {
   box-shadow: 5px 5px 5px #d2d2d2, -5px 5px 5px #d2d2d2;
   border-radius: 15px;
   max-height: 80px;
-  margin: 0;
+  margin: 0px;
   padding: 10px 5px 10px 5px;
 }
 .menu__form {
@@ -523,9 +520,17 @@ h1, h2 {
   margin-left: 5px;
 }
 .card__text {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   margin-top: 5px;
   margin-bottom: 5px;
   margin-left: 5px;
+}
+.card__text span {
+  font-weight: 500;
 }
 
 /*# sourceMappingURL=style.css.map */
