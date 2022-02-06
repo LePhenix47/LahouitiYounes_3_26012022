@@ -151,7 +151,7 @@ h1, h2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 0px 3px 6px #d2d2d2, 0px 3px 6px #d2d2d2;
+  box-shadow: 0px 3px 3px #0000001d, 0px 3px 3px #0000001d;
 }
 @media screen and (max-width: 768px) {
   .header__logo {
@@ -499,7 +499,7 @@ h1, h2 {
   background-color: #fff;
   box-shadow: 5px 5px 5px #d2d2d2, -5px 5px 5px #d2d2d2;
   border-radius: 15px;
-  max-height: 60px;
+  max-height: 80px;
   margin: 0;
   padding: 10px 5px 10px 5px;
 }
