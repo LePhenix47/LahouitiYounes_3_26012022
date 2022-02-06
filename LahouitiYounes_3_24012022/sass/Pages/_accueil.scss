@@ -12,6 +12,7 @@
     align-items: center;
 
     h2 {
+      margin: 22px 0 22px 0;
       @include Roboto-heading;
       @include laptop-only{
         text-align: center;
@@ -67,6 +68,7 @@
     @include center-flex;
     flex-direction: column;
     &-heading {
+      margin: 22px 0 22px 0;
       @include Roboto-heading;
       @include laptop-only{
         text-align: center;
