@@ -13,13 +13,12 @@ body {
   font-weight: 400;
 }
 
-/*
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
-*/
+
 ul {
   list-style-type: none;
   padding-left: 0px;
@@ -124,6 +123,9 @@ h1, h2 {
 .header i {
   font-size: 22px;
 }
+.header__text {
+  margin: 16px 0 16px 0;
+}
 .header__logo-slogan {
   display: inline;
 }
@@ -139,6 +141,7 @@ h1, h2 {
 }
 .header__heading {
   font-family: "Roboto";
+  margin: 20px 0px 20px 0;
 }
 .header__logo {
   font-family: "Shrikhand";
@@ -159,6 +162,9 @@ h1, h2 {
     height: 70px;
   }
 }
+.header__logo h1 {
+  margin: 22px 0 22px 0;
+}
 .header__location {
   background-color: #eaeaea;
   display: flex;
@@ -175,7 +181,7 @@ h1, h2 {
   color: #353535;
 }
 .header__location h4 {
-  margin-left: 15px;
+  margin: 22px 0 22px 15px;
 }
 .header__prenote-menu {
   background-color: #f6f6f6;
@@ -240,6 +246,7 @@ h1, h2 {
   align-items: center;
 }
 .main__operation h2 {
+  margin: 22px 0 22px 0;
   font-family: "Roboto";
   text-align: left;
   width: 100%;
@@ -304,6 +311,7 @@ h1, h2 {
   flex-direction: column;
 }
 .main__section-heading {
+  margin: 22px 0 22px 0;
   font-family: "Roboto";
   text-align: left;
   width: 100%;
