@@ -59,7 +59,7 @@
     z-index: 1;
     background: $color-white;
     @include center-flex;
-    @include box-shadow(0px, 0px, 3px, 6px);
+    @include box-shadow(0px, 0px, 3px, 3px, $color-black-opaque);
     @include mobile-only {
       @include center-flex;
       overflow: hidden;
