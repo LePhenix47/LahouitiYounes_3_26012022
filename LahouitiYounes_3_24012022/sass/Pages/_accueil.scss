@@ -105,11 +105,22 @@
   }
 
   &__section-card {
+    transform: scale(1);
+    transition-property: transform;
+    transition-duration: 400ms; //Avant et après évènement
     @include border-radius(20px);
     @include box-shadow;
     display: flex;
     flex-flow: column wrap;
     position: relative;
+    &:hover{
+      @include growth-anim(1.05, 400ms)
+      //Agrandit de 5% la carte lors du survol
+    }
+    &:active{
+    @include growth-anim(0.95, 200ms)
+      //Rapetissit de 5% la carte lors du clic
+    }
     &-img {
       object-fit: cover;
       overflow: hidden;

@@ -36,7 +36,7 @@
   border: $thickness solid $color;
 }
 
-
+//Minxin pour l'ombrage
 
 @mixin box-shadow(
   $left: 5px,
@@ -100,4 +100,11 @@
   right: $right;
   bottom: $bottom;
   left: $left;
+}
+
+
+//Mixin pour les transitions 
+@mixin growth-anim ($growth, $duration){
+  transform: scale($growth);
+  transition-duration: $duration;
 }

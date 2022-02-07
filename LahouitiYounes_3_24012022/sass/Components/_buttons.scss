@@ -3,10 +3,22 @@
   background: $color-gradient;
   padding: 14px 20px 14px 20px;
   font-weight: 600;
-  width: 51%;
+  width: 50%;
   border: none;
-  
   max-width: 415px;
+  opacity: 1;
+  transition: opacity 400ms;
+  transform: scale(1);
+  transition: transform 100ms;
+  &:hover {
+    opacity: 0.85;
+    @include box-shadow(3px, -3px, 3px, 7px, darken($color-border-shadow, 10%));
+  }
+
+  &:active{
+    transform: scale(0.95);
+  }
+
   &--rounded {
     @include border-radius(30px);
     @include box-shadow(3px, -3px, 3px, 5px, $color-border-shadow);
@@ -18,10 +30,6 @@
       display: inline-block;
       min-width: 220px;
     }
-  }
-
-  &:hover {
-    @include box-shadow(3px, -3px, 3px, 7px, darken($color-border-shadow, 10%));
   }
 
   @include mobile-only {

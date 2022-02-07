@@ -42,9 +42,20 @@ h1, h2 {
   background: linear-gradient(to right bottom, #ff79da, #9356dc);
   padding: 14px 20px 14px 20px;
   font-weight: 600;
-  width: 51%;
+  width: 50%;
   border: none;
   max-width: 415px;
+  opacity: 1;
+  transition: opacity 400ms;
+  transform: scale(1);
+  transition: transform 100ms;
+}
+.btn:hover {
+  opacity: 0.85;
+  box-shadow: 3px 3px 7px #b9b9b9, -3px 3px 7px #b9b9b9;
+}
+.btn:active {
+  transform: scale(0.95);
 }
 .btn--rounded {
   border-radius: 30px;
@@ -58,9 +69,6 @@ h1, h2 {
     display: inline-block;
     min-width: 220px;
   }
-}
-.btn:hover {
-  box-shadow: 3px 3px 7px #b9b9b9, -3px 3px 7px #b9b9b9;
 }
 @media screen and (max-width: 768px) {
   .btn--wide-screen {
@@ -358,11 +366,22 @@ h1, h2 {
   top: 13px;
 }
 .main__section-card {
+  transform: scale(1);
+  transition-property: transform;
+  transition-duration: 400ms;
   border-radius: 20px;
   box-shadow: 5px 5px 5px #d2d2d2, -5px 5px 5px #d2d2d2;
   display: flex;
   flex-flow: column wrap;
   position: relative;
+}
+.main__section-card:hover {
+  transform: scale(1.05);
+  transition-duration: 400ms;
+}
+.main__section-card:active {
+  transform: scale(0.95);
+  transition-duration: 200ms;
 }
 .main__section-card-img {
   object-fit: cover;
