@@ -14,39 +14,47 @@
     h2 {
       margin: 22px 0 22px 0;
       @include Roboto-heading;
-      @include laptop-only{
+      @include laptop-only {
         text-align: center;
       }
-      @include desktop-only{
+      @include desktop-only {
         text-align: center;
       }
     }
 
     &-card-list {
       display: flex;
+      position: relative;
+      counter-reset: fonction; //OL
+
       @include mobile-only {
         flex-flow: column wrap;
       }
-      @include tablet-only{
+      @include tablet-only {
         flex-direction: column;
         text-align: center;
       }
     }
-    &-number {
-      color: white;
-      background: $color-primary;
-      border-radius: 15px;
-      position: absolute;
-      transform: translate(-135px, 40px);
-      padding: 5px 10px;
-    }
 
     &-card {
+      position: relative;
       @include border-radius(20px);
       @include box-shadow(5px, -5px, 5px, 3px, $color-grey);
       padding: 25px;
       margin: 20px;
       background-color: $color-light-grey;
+      list-style-type: none;
+      counter-increment: fonction; //LI
+      &::before {
+        content: counter(fonction);
+        color: white;
+        background: $color-primary;
+        border-radius: 15px;
+        padding: 5px 10px;
+        position: absolute;
+        left: -20px;
+        top: 20px;
+      }
       &:hover {
         background: #f5edff;
         i {
@@ -70,10 +78,10 @@
     &-heading {
       margin: 22px 0 22px 0;
       @include Roboto-heading;
-      @include laptop-only{
+      @include laptop-only {
         text-align: center;
       }
-      @include desktop-only{
+      @include desktop-only {
         text-align: center;
       }
     }
@@ -94,6 +102,16 @@
     }
   }
 
+  &__card-list--flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    @include desktop-only {
+      width: 900px;
+    }
+  }
+
   &__section-card-new {
     background-color: $color-tertiary;
     color: darken($color-tertiary, 40%);
@@ -105,36 +123,44 @@
   }
 
   &__section-card {
-    transform: scale(1);
     transition-property: transform;
     transition-duration: 400ms; //Avant et après évènement
     @include border-radius(20px);
     @include box-shadow;
     display: flex;
-    flex-flow: column wrap;
+    flex-direction: column;
+    flex-wrap: wrap;
     position: relative;
-    &:hover{
-      @include growth-anim(1.05, 400ms)
+    width: 400px;
+    @include mobile-only {
+      width: 90%;
+      min-width: 90%;
+    }
+    height: 250px;
+    margin: 20px 0;
+    @include tablet-only {
+      margin: 20px;
+    }
+    @include desktop-only {
+      margin: 20px;
+    }
+    @include laptop-only {
+      margin: 20px;
+    }
+
+    &:hover {
+      transform: scale(1.05);
       //Agrandit de 5% la carte lors du survol
     }
-    &:active{
-    @include growth-anim(0.95, 200ms)
+    &:active {
+      transform: scale(0.95);
       //Rapetissit de 5% la carte lors du clic
     }
     &-img {
       object-fit: cover;
       overflow: hidden;
       @include border-corner-rad(15px, 15px, 0, 0);
-      height: 275px;
-      @include mobile-only {
-        height: 175px;
-      }
-      @include tablet-only {
-        height: 200px;
-      }
-      @include desktop-only {
-        height: 300px;
-      }
+      height: 170px;
     }
     &-content {
       @include border-corner-rad(0, 0, 15px, 15px);
@@ -153,20 +179,10 @@
         margin: 5px 5px 5px 5px;
       }
     }
-    &-like-btn{
+    &-like-btn {
       position: absolute;
       right: 25px;
       bottom: 25px;
-    }
-  }
-
-  a {
-    @include mobile-only {
-      height: 175px;
-    }
-    @include desktop-only {
-      height: 300px;
-      width: 450px;
     }
   }
 }

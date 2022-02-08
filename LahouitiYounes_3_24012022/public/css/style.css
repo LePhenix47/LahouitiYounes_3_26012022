@@ -45,10 +45,8 @@ h1, h2 {
   width: 50%;
   border: none;
   max-width: 415px;
-  opacity: 1;
-  transition: opacity 400ms;
-  transform: scale(1);
-  transition: transform 100ms;
+  transition-property: opacity, transform;
+  transition-duration: 400ms;
 }
 .btn:hover {
   opacity: 0.85;
@@ -92,6 +90,8 @@ h1, h2 {
   z-index: 2;
   width: 22px;
   height: 23px;
+  transition-property: transform;
+  transition-duration: 400ms;
 }
 @media screen and (max-width: 768px) {
   .header a {
@@ -128,6 +128,12 @@ h1, h2 {
     bottom: 0;
     left: 50px;
   }
+}
+.header a:hover {
+  transform: rotate(360deg);
+}
+.header a:active {
+  transform: scale(0.95);
 }
 .header i {
   font-size: 22px;
@@ -273,6 +279,8 @@ h1, h2 {
 }
 .main__operation-card-list {
   display: flex;
+  position: relative;
+  counter-reset: fonction;
 }
 @media screen and (max-width: 768px) {
   .main__operation-card-list {
@@ -285,20 +293,25 @@ h1, h2 {
     text-align: center;
   }
 }
-.main__operation-number {
-  color: white;
-  background: #9356dc;
-  border-radius: 15px;
-  position: absolute;
-  transform: translate(-135px, 40px);
-  padding: 5px 10px;
-}
 .main__operation-card {
+  position: relative;
   border-radius: 20px;
   box-shadow: 5px 5px 3px #eaeaea, -5px 5px 3px #eaeaea;
   padding: 25px;
   margin: 20px;
   background-color: #f6f6f6;
+  list-style-type: none;
+  counter-increment: fonction;
+}
+.main__operation-card::before {
+  content: counter(fonction);
+  color: white;
+  background: #9356dc;
+  border-radius: 15px;
+  padding: 5px 10px;
+  position: absolute;
+  left: -20px;
+  top: 20px;
 }
 .main__operation-card:hover {
   background: #f5edff;
@@ -356,6 +369,17 @@ h1, h2 {
     gap: 20px;
   }
 }
+.main__card-list--flex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+@media screen and (min-width: 1150px) {
+  .main__card-list--flex {
+    width: 900px;
+  }
+}
 .main__section-card-new {
   background-color: #99e2d0;
   color: #278870;
@@ -366,43 +390,50 @@ h1, h2 {
   top: 13px;
 }
 .main__section-card {
-  transform: scale(1);
   transition-property: transform;
   transition-duration: 400ms;
   border-radius: 20px;
   box-shadow: 5px 5px 5px #d2d2d2, -5px 5px 5px #d2d2d2;
   display: flex;
-  flex-flow: column wrap;
+  flex-direction: column;
+  flex-wrap: wrap;
   position: relative;
+  width: 400px;
+  height: 250px;
+  margin: 20px 0;
+}
+@media screen and (max-width: 768px) {
+  .main__section-card {
+    width: 90%;
+    min-width: 90%;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .main__section-card {
+    margin: 20px;
+  }
+}
+@media screen and (min-width: 1150px) {
+  .main__section-card {
+    margin: 20px;
+  }
+}
+@media screen and (min-width: 993px) and (max-width: 1150px) {
+  .main__section-card {
+    margin: 20px;
+  }
 }
 .main__section-card:hover {
   transform: scale(1.05);
-  transition-duration: 400ms;
 }
 .main__section-card:active {
   transform: scale(0.95);
-  transition-duration: 200ms;
 }
 .main__section-card-img {
   object-fit: cover;
   overflow: hidden;
   border-radius: 15px 15px 0 0;
-  height: 275px;
-}
-@media screen and (max-width: 768px) {
-  .main__section-card-img {
-    height: 175px;
-  }
-}
-@media screen and (min-width: 768px) and (max-width: 992px) {
-  .main__section-card-img {
-    height: 200px;
-  }
-}
-@media screen and (min-width: 1150px) {
-  .main__section-card-img {
-    height: 300px;
-  }
+  height: 170px;
 }
 .main__section-card-content {
   border-radius: 0 0 15px 15px;
@@ -426,17 +457,6 @@ h1, h2 {
   right: 25px;
   bottom: 25px;
 }
-@media screen and (max-width: 768px) {
-  .main a {
-    height: 175px;
-  }
-}
-@media screen and (min-width: 1150px) {
-  .main a {
-    height: 300px;
-    width: 450px;
-  }
-}
 
 .food-list {
   background: #f6f6f6;
@@ -456,6 +476,16 @@ h1, h2 {
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  /*
+    &__card--hover{
+      &-on{
+
+      }
+      &-off{
+
+      }
+    }
+    */
 }
 .menu__img-fit {
   height: 250px;
@@ -464,6 +494,7 @@ h1, h2 {
 .menu__image {
   width: 100%;
   min-width: 420px;
+  object-fit: fill;
 }
 .menu__main-heading {
   display: flex;
@@ -510,6 +541,7 @@ h1, h2 {
   margin: 20px 0 20px 0;
 }
 .menu__card {
+  overflow: hidden;
   text-overflow: ellipsis;
   min-width: 340px;
   background-color: #fff;
@@ -518,6 +550,15 @@ h1, h2 {
   max-height: 80px;
   margin: 0px;
   padding: 10px 5px 10px 5px;
+}
+.menu__content {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+}
+.menu__cost {
+  flex: 1;
+  text-align: right;
 }
 .menu__form {
   background: #f6f6f6;
@@ -539,17 +580,13 @@ h1, h2 {
   margin-left: 5px;
 }
 .card__text {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   margin-top: 5px;
   margin-bottom: 5px;
   margin-left: 5px;
-}
-.card__text span {
-  font-weight: 500;
+  white-space: nowrap;
+  flex: 11;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -23,6 +23,7 @@
   &__image {
     width: 100%;
     min-width: 420px;
+    object-fit: fill;
   }
 
   &__main-heading {
@@ -51,7 +52,7 @@
     }
   }
 
-  &__underline{
+  &__underline {
     position: absolute;
     background-color: $color-tertiary;
     width: 40px;
@@ -70,6 +71,7 @@
   }
 
   &__card {
+    overflow: hidden;
     text-overflow: ellipsis;
     min-width: 340px;
     background-color: $color-white;
@@ -79,6 +81,27 @@
     margin: 0px;
     padding: 10px 5px 10px 5px;
   }
+
+  &__content {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+  }
+
+  &__cost {
+    flex: 1;
+    text-align: right;
+  }
+/*
+  &__card--hover{
+    &-on{
+
+    }
+    &-off{
+
+    }
+  }
+  */
 
   &__form {
     background: $color-light-grey;
@@ -106,16 +129,13 @@
   }
 
   &__text {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     margin-top: 5px;
     margin-bottom: 5px;
     margin-left: 5px;
-    span{
-      font-weight: 500;
-    }
+    white-space: nowrap;
+    flex: 11;
+    
   }
 }

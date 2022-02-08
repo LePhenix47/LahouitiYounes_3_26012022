@@ -102,9 +102,6 @@
   left: $left;
 }
 
+//Mixin pour les ol
 
-//Mixin pour les transitions 
-@mixin growth-anim ($growth, $duration){
-  transform: scale($growth);
-  transition-duration: $duration;
-}
+

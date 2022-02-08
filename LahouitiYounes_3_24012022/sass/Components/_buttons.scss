@@ -6,10 +6,9 @@
   width: 50%;
   border: none;
   max-width: 415px;
-  opacity: 1;
-  transition: opacity 400ms;
-  transform: scale(1);
-  transition: transform 100ms;
+
+  transition-property: opacity, transform;
+  transition-duration: 400ms;
   &:hover {
     opacity: 0.85;
     @include box-shadow(3px, -3px, 3px, 7px, darken($color-border-shadow, 10%));
